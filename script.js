@@ -5,15 +5,19 @@ let score_B = 0;
 function hovereffect() {
     // Add an effect on hovering
     let button = document.getElementById(event.srcElement.id);
-    button.style.backgroundColor = "#FFFFFF";
-    button.style.opacity = "50%";
+    if (!button.disabled) {
+        button.style.backgroundColor = "#FFFFFF";
+        button.style.opacity = "50%";
+    }
 }
 
 function hovereffectclear() {
     // Clear hover effect
     let button = document.getElementById(event.srcElement.id);
-    button.style.backgroundColor = "#1C1C1C";
-    button.style.opacity = "100%";
+    if (!button.disabled) {
+        button.style.backgroundColor = "#1C1C1C";
+        button.style.opacity = "100%";
+    }
 }
 
 function simulategame() {
